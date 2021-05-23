@@ -10,14 +10,14 @@ module.exports = {
 			}),
 		],
 	},
-	devServer: {
-		proxy: {
-			"^/api": {
-				target: "https://herokujsonserver.herokuapp.com/",
-				changeOrigin: true,
-				logLevel: "debug",
-				pathRewrite: { "^/api": "/" },
-			},
-		},
-	},
+	// devServer: {
+	// 	proxy: {
+	// 		"^/api": {
+	// 			target: "https://herokujsonserver.herokuapp.com/",
+	// 			changeOrigin: true,
+	// 			logLevel: "debug",
+	// 			pathRewrite: { "^/api": "/" },
+	// 		},
+	// 	},
+	// },
 };

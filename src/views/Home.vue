@@ -37,13 +37,13 @@
         },
         methods: {
             async fetchTasks() {
-                const res = await fetch('api/tasks?_sort=id&_order=desc')
+                const res = await fetch('https://herokujsonserver.herokuapp.com/tasks?_sort=id&_order=desc')
                 const data = await res.json()
 
                 return data
             },
             async fetchTask(id) {
-                const res = await fetch(`api/tasks/${id}`)
+                const res = await fetch(`https://herokujsonserver.herokuapp.com/tasks/${id}`)
                 const data = await res.json()
 
                 return data
@@ -66,7 +66,7 @@
                 const fetchTask = await this.fetchTask(id)
                 const updateTask = {...fetchTask, reminder: !fetchTask.reminder}
 
-                const res = await fetch(`api/tasks/${id}`, {
+                const res = await fetch(`https://herokujsonserver.herokuapp.com/tasks/${id}`, {
                     method: 'PATCH',
                     headers: {
                         'Content-type': 'application/json',

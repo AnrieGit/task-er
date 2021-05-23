@@ -61,7 +61,7 @@
                     reminder: this.reminder,
                 }
 
-                const res = await fetch('api/tasks', {
+                const res = await fetch('https://herokujsonserver.herokuapp.com/tasks', {
                     method: 'POST',
                     headers: {
                         'Content-type': 'application/json',
