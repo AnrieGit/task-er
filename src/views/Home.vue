@@ -53,7 +53,7 @@
             },
             async deleteTask(id) {
                 if(confirm('Are you sure you want to delete this task?')) {
-                    const res = await fetch(`api/tasks/${id}`, {
+                    const res = await fetch(`https://herokujsonserver.herokuapp.com/tasks/${id}`, {
                         method: 'DELETE'
                     })
 
