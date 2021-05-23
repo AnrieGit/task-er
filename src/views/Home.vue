@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Header title="Task Tracker"/>
+        <Header title="Task Tracer"/>
         <AddTask @show-alert="$emit('show-alert')" @add-task="addTask"/>
         <Tasks :loading="loading" @toggle-reminder="toggleReminder" @delete-task="deleteTask" :tasks="tasks"/>
     </div>   
